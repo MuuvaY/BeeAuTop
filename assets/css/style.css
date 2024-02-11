@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgba(255, 217, 102, 1), rgba(255, 204, 48, 0.6), rgba(241, 136, 5, 0)), url(./../img/alveole.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#premierepage>h1 {
+    color: #202C59;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#logo>img {
+    object-fit: cover;
+    width: 60vw;
+    height: 60vw;
+    text-align: center;
+    transform: translateX(2.5vh);
+
+}
+
+#logo {
+    text-align: center;
+}
+
+#connection>h1 {
+    margin: 20px;
+    color: #202C59;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#bouton a {
+    font-family: 'Inter', sans-serif;
+    background-color: #202C59;
+    color: #FFD966;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 7px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    box-shadow: 3px 3px #FFD966;
+}
+
+#bouton {
+    text-align: center;
+    margin-top: 70px;
+}
+
+main {
+    position: absolute;
+    top: 300px;
+}
+
+/*Mise en forme beeautop_connection.php*/
+#connecte>h1 {
+    color: #202C59;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15vh;
+}
+
+#connection button {
+    font-family: 'Inter', sans-serif;
+    background-color: #202C59;
+    color: #FFD966;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    padding: 7px;
+    width: 50vw;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    box-shadow: 3px 3px #FFD966;
+}
+
+#connection form {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+#connection form input {
+    width: 50vw;
+    height: 3vh;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+#ruchesd {
+    color: #202C59;
+}
+
+.fa-solid {
+    font-size: 40px;
+    color: #202C59;
+    margin-left: 10px;
+}
+
+#ruchesd>#navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30vw;
+    margin-top: 5vw;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.btn-delete {
+    display: inline-block;
+    background-color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 10px;
+    color: #202C59;
+
+}
+
+.btn-edit {
+    display: inline-block;
+    background-color: #FFCC30;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 10px;
+    color: #202C59;
+
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #202C59;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height:40vh;
+
+}
+
+.beeautop_ruches {
+    background-image: url(./../img/Maskgroup.png);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bee_ruches {
+    background-image: url(./../img/maskgroup2.png);
+    background-repeat: no-repeat;
+    background-size: 80vw;
+    background-position-x: right;
+    background-position-y: center;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    top: 5vh;
+    z-index: 900;
+}
+
+#map {
+    width: 80vw;
+    height: 40vh;
+    border-radius: 20px;
+    position: absolute;
+    right: 10vw;
+
+}
+
+#ruches {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mapboxgl-ctrl-bottom-left {
+    display: none;
+}
+
+.mapboxgl-ctrl-bottom-right {
+    display: none;
+}
