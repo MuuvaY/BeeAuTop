@@ -1,13 +1,13 @@
-<?php 
+<?php
 
 require './bootstrap.php';
-echo head('beeautop','/assets/css');  
+echo head('beeautop', '/assets/css');
 
 ?>
 
 
 <body>
-    <section id ="premierepage">
+    <section id="premierepage">
         <div id="logo">
             <img src="./assets/img/logoBeeautop.webp" alt="">
         </div>

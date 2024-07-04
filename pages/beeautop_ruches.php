@@ -1,20 +1,25 @@
 <?php
-
 require './../bootstrap.php';
 echo head('beeautop', '/../assets/css');
+
+if (!isset($_GET['idApiculteur'])) {
+    header('Location: auto_login.php');
+    exit();
+}
+
 $idA = $_GET['idApiculteur'];
 $sql = 'SELECT * FROM ruche INNER JOIN apiculteur ON ruche.idApiculteur = apiculteur.idApiculteur WHERE ruche.idApiculteur = :idA';
 $ruches = $dbh->prepare($sql);
 $ruches->execute([
     'idA' => $idA,
 ]);
-$infoRuches = $ruches -> fetch();
+$infoRuches = $ruches->fetch();
 ?>
 
 <body class="beeautop_ruches">
     <section id="ruchesd">
         <div id="navbar">
-            <h1><?php echo $infoRuches['pseudo']?></h1>
+            <h1><?php echo $infoRuches['pseudo'] ?></h1>
             <a href="logout.php" class="btn-logout">
                 <i class="fa-solid fa-power-off"></i>
             </a>
@@ -35,16 +40,9 @@ $infoRuches = $ruches -> fetch();
                         maxBounds: bounds,
                     });
 
-                // 2 rechercher dans la table
-                    /*click sur le markeur*/
-                    /*marker.addEventListener('click', function{
-                        
-                    })*/
-                </script>
-                <?php
-                $localRuches = $ruches->fetchAll();
-                foreach ($localRuches as $ruche) { ?>
-                    <script>
+                    <?php
+                    $localRuches = $ruches->fetchAll();
+                    foreach ($localRuches as $ruche) { ?>
                         var latitude = <?php echo $ruche['latitude']; ?>;
                         var longitude = <?php echo $ruche['longitude']; ?>;
                         var marqueur = new mapboxgl.Marker({ color: 'orange' }).setLngLat([longitude, latitude]).addTo(map);
@@ -58,10 +56,8 @@ $infoRuches = $ruches -> fetch();
                                 zoom: 10
                             });
                         });
-                    </script>
-
-                <?php }
-                ?>
+                    <?php } ?>
+                </script>
             </div>
         </div>
         <div id="bottom">
@@ -74,3 +70,4 @@ $infoRuches = $ruches -> fetch();
             </div>
         </div>
     </section>
+</body>
